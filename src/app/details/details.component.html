@@ -1,0 +1,35 @@
+<h2 class="state-title">
+	{{stateWeatherDetails?.city?.name}} , {{stateWeatherDetails?.city?.country}}
+</h2>
+
+<div class="row">
+	<div class="column">
+		<h2>7-days forecast with Onecall</h2>
+		<ul class="forecast-list">
+
+			<li *ngFor="let state of stateOnecallForecast; let i=index">
+				<div class="weather-details">
+					<span class="w-type">{{state.forecastDate | date}} </span>
+					<span class="w-type">Temperature : </span><span> {{state?.temp?.max | number: '1.0-0'}} °C /
+						{{state?.temp?.min | number: '1.0-0'}} °C
+					</span>
+					<span class="w-type">Sea Level : </span><span> {{state?.pressure }} hPa</span>
+				</div>
+			</li>
+
+		</ul>
+	</div>
+	<div class="column">
+		<h2>5-days forecast with forecast service</h2>
+		<ul class="forecast-list">
+			<li *ngFor="let state of stateWeatherForecast">
+				<div class="weather-details">
+					<span class="w-type">{{state.forecastDate | date}} </span>
+					<span class="w-type">Temperature : </span><span> {{state?.main?.temp_max }} °C /
+						{{state?.main?.temp_min }} °C </span>
+					<span class="w-type">Sea Level :</span><span>{{state?.main?.sea_level }} hPa</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	

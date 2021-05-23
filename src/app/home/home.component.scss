@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    font-family: Space Grotesk,Arial,sans-serif;
+  }
+  h2, h3 {
+    font-weight: 700;
+}
+
+.column {
+    padding: 20px;
+    color:black;
+    background:white; 
+    width: 50%;
+    float: left;
+    height: 200px;
+    margin-bottom:1px;
+    
+  }
+
+  
+  .temp {
+    font-size: 36px;
+  }
+  .more-details{
+      float: right;
+      font-weight: 700;
+      color:blue;
+      cursor: pointer;
+  }
+.weather-details{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0,0,0,.15);
+    padding: 10px 0;
+}
+.w-type{
+    flex-grow: 1;
+}
+ 
+
+// .card {
+
+//     width: 80%;
+//     /* border: 1px solid gray; */
+//     background: white;
+//     box-shadow: darkkhaki;
+//     margin: 1em;
+//     padding: 1em;
+// }
+
+// .card-title {
+//     font-weight: 500;
+//     line-height: 1.5;
+//     font-size: 16px;
+//     text-transform: uppercase;
+// }

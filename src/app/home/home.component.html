@@ -1,0 +1,19 @@
+<div class="row " *ngFor="let state of statesWeatherDetails">
+  <div class="column">
+    <div class="">
+      <h2 class="card-title">{{state?.name}}, {{state?.sys?.country}}</h2>
+      <div>Temperature :</div>
+      <h2 class="temp"> {{state?.main?.temp | number }} °C</h2>
+    </div>
+  </div>
+  <div class="column">
+    <div class="weather-details"><span class="w-type">Sunrise IST : </span> <span>{{state?.sys?.sunriseDateIST |
+        date:"h:mm:ss a" }}</span></div>
+    <div class="weather-details"><span class="w-type">Sunset IST: </span>{{state?.sys?.sunsetDateIST | date:"h:mm:ss
+      a"}}</div>
+    <div class="weather-details"><span class="w-type">Sunrise UTC: </span> <span>{{state?.sys?.sunriseDateUTCString
+        }}</span></div>
+    <div class="weather-details"><span class="w-type">Sunset UTC: </span>{{state?.sys?.sunsetDateUTCString }}</div>
+    <div (click)="onSelect(state)" class="more-details">More details > </div>
+  </div>
+</div>
